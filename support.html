@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/favicon.jpg">
+<title>Support | Living Yoga Wisdom School</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6NQR8V2M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CP6NQR8V2M');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/logo.png">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --indigo-deep: #1a2060;
+  --gold: #c9922a;
+  --gold-light: #e8b84b;
+  --cream: #f7f4ef;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: var(--cream);
+  color: var(--indigo-deep);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold-light); outline-offset: 3px; border-radius: 3px;
+}
+
+/* ===================== NAV ===================== */
+#main-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: rgba(26,32,96,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.2);
+}
+.nav-logo { width: 48px; height: 48px; border-radius: 50%; background: white; padding: 4px; display: block; }
+.nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: 36px; }
+.nav-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+
+/* ===================== MAIN ===================== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 24px 80px;
+}
+
+.coming-soon-wrap { max-width: 560px; }
+
+.coming-soon-wrap h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: clamp(1.6em, 3vw, 2.2em);
+  color: var(--indigo-deep);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.coming-soon-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.2em, 5vw, 3.4em);
+  font-style: italic;
+  color: var(--indigo-deep);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.coming-soon-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 28px;
+}
+
+.coming-soon-wrap p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(26,32,96,0.65);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.btn-back {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--indigo-deep);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  padding: 14px 36px;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(201,146,42,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-back:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,146,42,0.45); }
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #0d1130;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid rgba(201,146,42,0.1);
+}
+
+footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  margin-top: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--gold-light); }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.social-icons button {
+  background: none; border: none; cursor: pointer;
+  padding: 6px; color: rgba(255,255,255,1);
+  transition: color 0.2s, transform 0.2s; line-height: 0;
+}
+
+.social-icons button:hover { color: var(--gold-light); transform: translateY(-2px); }
+
+.social-toast {
+  position: fixed; bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  background: rgba(26,32,96,0.96); color: rgba(255,255,255,0.9);
+  font-family: Georgia, serif; font-size: 14px; padding: 12px 28px;
+  border-radius: 50px; border: 1px solid rgba(201,146,42,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s; z-index: 500; white-space: nowrap;
+}
+.social-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ===================== HAMBURGER ===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: rgba(255,255,255,0.85); border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none; position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(26,32,96,0.98);
+  backdrop-filter: blur(12px);
+  z-index: 105; padding: 80px 32px 40px;
+  flex-direction: column; gap: 8px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Cinzel', serif; font-size: 18px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--gold-light); }
+.mobile-menu-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 28px; line-height: 1; cursor: pointer; padding: 4px 8px;
+}
+.mobile-menu-close:hover { color: white; }
+
+@media (max-width: 600px) {
+  #main-nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-logo { width: 40px; height: 40px; }
+  main { padding: 100px 20px 60px; }
+  footer { padding: 28px 20px; }
+  .footer-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+}
+
+</style>
+</head>
+<body>
+
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/index.html" aria-label="Living Yoga Wisdom School — home">
+    <img class="nav-logo" src="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/logo.png" alt="" fetchpriority="high">
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/courses.html">Courses</a></li>
+    <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/resources.html">Resources</a></li>
+    <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/contact.html">Contact</a></li>
+    <li><a href="support.html" class="active">Support</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&#215;</button>
+  <a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/courses.html">Courses</a>
+  <a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/resources.html">Resources</a>
+  <a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/contact.html">Contact</a>
+  <a href="support.html">Support</a>
+</div>
+
+<main>
+  <div class="coming-soon-wrap">
+    <h1>Support</h1>
+    <div class="coming-soon-divider" aria-hidden="true"></div>
+    <p class="coming-soon-sub">Coming Soon</p>
+    <p>This page is currently being prepared. Check back soon.</p>
+    <a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/index.html" class="btn-back">Return Home</a>
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <div class="social-icons">
+    <button onclick="showComingSoon()" aria-label="YouTube">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+    </button>
+    <button onclick="showComingSoon()" aria-label="Facebook">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+    </button>
+    <button onclick="showComingSoon()" aria-label="Instagram">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.85C2.38 3.85 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95C23.73 2.71 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32A6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Footer navigation">
+    <ul class="footer-links">
+      <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/index.html">Home</a></li>
+      <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/courses.html">Courses</a></li>
+      <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/resources.html">Resources</a></li>
+      <li><a href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/contact.html">Contact</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+  </nav>
+  <p>© 2025 Living Yoga Wisdom School</p>
+</footer>
+
+<div class="social-toast" id="social-toast">Coming Soon</div>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+let toastTimer;
+function showComingSoon() {
+  const toast = document.getElementById('social-toast');
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-menu-close');
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+mobileClose.addEventListener('click', closeMobileMenu);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', closeMobileMenu);
+});
+</script>
+
+</body>
+</html>

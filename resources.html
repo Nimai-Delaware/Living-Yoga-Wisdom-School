@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Living Yoga Wisdom School</title>
+<link rel="icon" type="image/jpeg" href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/favicon.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6NQR8V2M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CP6NQR8V2M');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/logo.png">
+<link rel="preload" as="image" href="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/topomap.jpg">
+<style>
+
+.skip-link {
+  position: fixed; top: -200px; left: 24px;
+  background: var(--gold-light); color: var(--indigo-deep);
+  font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600;
+  padding: 12px 20px; border-radius: 4px; text-decoration: none;
+  z-index: 9999; transition: top 0.2s;
+}
+.skip-link:focus { top: 16px; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold-light); outline-offset: 3px; border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+:root {
+  --indigo-deep: #1a2060; --indigo-mid: #2a3580; --indigo-soft: #3a5ee8;
+  --gold: #c9922a; --gold-light: #e8b830; --cream: #f7f4ef;
+  --text: #1e2240; --text-soft: #4a5280;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif; font-weight: 370;
+  font-size: 17px; color: var(--text); background: var(--cream); overflow-x: hidden;
+}
+
+/* NAV */
+#main-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 48px; background: rgba(26,32,96,0.96);
+  backdrop-filter: blur(12px); box-shadow: 0 2px 24px rgba(0,0,0,0.2);
+}
+.nav-logo-link { display: flex; align-items: center; flex-shrink: 0; border-radius: 50%; line-height: 0; }
+.nav-logo { height: 44px; width: 44px; object-fit: contain; object-position: center; background: white; border-radius: 50%; padding: 5px; display: block; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--gold-light); }
+
+/* PAGE HEADER */
+.page-header {
+  background: linear-gradient(160deg, var(--indigo-deep) 0%, #0f1440 100%);
+  padding: 120px 48px 64px; position: relative; overflow: hidden;
+}
+.page-header::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/topomap.jpg");
+  background-size: cover; background-position: center; opacity: 0.06;
+}
+.page-header-inner { position: relative; max-width: 860px; margin: 0 auto; }
+.page-eyebrow { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+.page-header h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.2em, 5vw, 3.6em); color: #ffffff; line-height: 1.15; margin-bottom: 20px; }
+.page-header h1 em { font-style: italic; color: rgba(255,255,255,0.7); }
+.page-header p { color: rgba(255,255,255,0.65); font-size: 1.05em; line-height: 1.8; font-weight: 370; max-width: 600px; }
+
+/* MAIN */
+main { max-width: 860px; margin: 0 auto; padding: 64px 48px 100px; }
+
+/* RESOURCE LIST */
+.resource-list {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(26,32,96,0.08);
+  border: 1px solid rgba(26,32,96,0.1);
+}
+
+/* individual resource item */
+.resource-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(26,32,96,0.07);
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.resource-item:last-child { border-bottom: none; }
+a.resource-item:hover { background: #f7f4ef; }
+div.resource-item { cursor: default; }
+
+.resource-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.resource-icon.link    { background: rgba(26,32,96,0.08); }
+.resource-icon.doc     { background: rgba(201,146,42,0.12); }
+.resource-icon.video   { background: rgba(58,94,232,0.1); }
+.resource-icon.community { background: rgba(42,160,80,0.1); }
+
+.resource-text { flex: 1; min-width: 0; }
+
+.resource-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: var(--indigo-deep);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+a.resource-item:hover .resource-title { color: var(--indigo-soft); }
+
+.resource-desc {
+  font-size: 0.95em;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.resource-meta {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+.resource-arrow {
+  color: var(--indigo-soft);
+  font-size: 22px;
+  flex-shrink: 0;
+  opacity: 0.25;
+  transition: opacity 0.15s;
+  align-self: center;
+}
+a.resource-item:hover .resource-arrow { opacity: 1; }
+
+/* FOOTER */
+footer {
+  background: #0d1130; padding: 40px 48px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  border-top: 1px solid rgba(201,146,42,0.1);
+}
+footer p { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); text-align: center; margin-top: 12px; }
+.footer-links { display: flex; gap: 28px; list-style: none; justify-content: center; padding: 0; margin: 0; }
+.footer-links a { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold-light); }
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  #main-nav { padding: 14px 20px; }
+  .nav-links { gap: 18px; }
+  .page-header { padding: 100px 24px 48px; }
+  main { padding: 40px 20px 80px; }
+  .resource-item { padding: 20px 22px; gap: 14px; }
+  .resource-icon { width: 34px; height: 34px; font-size: 15px; }
+  footer { padding: 28px 20px; }
+  .footer-links { gap: 16px; }
+}
+@media (max-width: 480px) {
+  #main-nav .nav-links { display: none !important; }
+  #main-nav .hamburger { display: flex !important; }
+}
+
+/* ===================== ZOOM FORM ===================== */
+.zoom-inline-wrap {
+  background: #f0f4ff;
+  border: 1.5px solid rgba(58,94,232,0.15);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+.zoom-inline-field { margin-bottom: 14px; }
+.zoom-inline-field label {
+  display: block; font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; font-family: Arial, sans-serif;
+  color: #5b6490; font-weight: 600; margin-bottom: 6px;
+}
+.zoom-inline-field input {
+  width: 100%; padding: 9px 12px; font-size: 15px;
+  font-family: Georgia, serif; color: #2c3256; background: #fff;
+  border: 1.5px solid rgba(91,124,255,0.22); border-radius: 7px;
+  outline: none; transition: border-color 0.15s; box-sizing: border-box;
+}
+.zoom-inline-field input:focus { border-color: #5b7cff; }
+.zoom-inline-field-error { color: #b03030; font-size: 13px; font-family: Arial, sans-serif; margin-top: 4px; display: none; }
+.zoom-inline-submit {
+  width: 100%; padding: 11px 16px; background: #3a5ee8; color: white;
+  border: none; border-radius: 7px; font-size: 14px; font-family: Georgia, serif;
+  cursor: pointer; transition: background 0.15s, transform 0.15s;
+}
+.zoom-inline-submit:hover { background: #2d4ed4; transform: translateY(-1px); }
+.zoom-inline-submit:disabled { opacity: 0.65; cursor: default; transform: none; }
+.zoom-inline-success {
+  display: none; background: #edfaf3; border: 1.5px solid #2eb870;
+  border-radius: 8px; padding: 18px; text-align: center; margin-top: 16px;
+}
+.zoom-inline-success p { font-family: Georgia, serif; font-size: 0.9em; color: #1a4a30; margin: 0 0 10px; }
+.zoom-inline-success a {
+  display: inline-block; font-family: 'Cinzel', serif; font-size: 12px;
+  letter-spacing: 0.1em; color: white; background: #2eb870;
+  padding: 9px 20px; border-radius: 6px; text-decoration: none; transition: background 0.15s;
+}
+.zoom-inline-success a:hover { background: #1a9e55; }
+
+/* ===================== HAMBURGER ===================== */
+.hamburger {
+  display: none; flex-direction: column; justify-content: center;
+  gap: 5px; background: none; border: none; cursor: pointer;
+  padding: 6px; border-radius: 4px; z-index: 110;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: rgba(255,255,255,0.85); border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none; position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(26,32,96,0.98); backdrop-filter: blur(12px);
+  z-index: 105; padding: 80px 32px 40px; flex-direction: column;
+  gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Cinzel', serif; font-size: 18px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: #e8b84b; }
+.mobile-menu-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 28px; line-height: 1; cursor: pointer; padding: 4px 8px;
+}
+.mobile-menu-close:hover { color: white; }
+
+/* ===================== SOCIAL ICONS ===================== */
+.social-icons { display: flex; justify-content: center; gap: 28px; margin-bottom: 20px; }
+.social-icons button {
+  background: none; border: none; cursor: pointer; padding: 6px;
+  color: rgba(255,255,255,1); transition: color 0.2s, transform 0.2s; line-height: 0;
+}
+.social-icons button:hover { color: #e8b84b; transform: translateY(-2px); }
+.social-toast {
+  position: fixed; bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  background: rgba(26,32,96,0.96); color: rgba(255,255,255,0.9);
+  font-family: Georgia, serif; font-size: 14px; padding: 12px 28px;
+  border-radius: 50px; border: 1px solid rgba(201,146,42,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s; z-index: 500; white-space: nowrap;
+}
+.social-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo-link" aria-label="Living Yoga Wisdom School — home">
+    <img class="nav-logo" src="https://nimai-delaware.github.io/Living-Yoga-Wisdom-School/images/logo.png" alt="" fetchpriority="high">
+  </a>
+  <ul class="nav-links">
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="resources.html" aria-current="page">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="support.html">Support</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&#215;</button>
+  <a href="courses.html">Courses</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+  <a href="support.html">Support</a>
+</div>
+
+<header class="page-header" role="banner" aria-label="Resources page header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Going Further</p>
+    <h1>Resources</h1>
+    <p>Supplementary materials, community connections, and tools to support your study and practice.</p>
+  </div>
+</header>
+
+<main id="main-content" aria-label="Resources">
+
+  <div class="resource-list">
+
+    <!-- IN-PERSON PROGRAMS -->
+    <a class="resource-item" href="#" target="_blank" rel="noopener noreferrer">
+      <div class="resource-icon community" aria-hidden="true">🌍</div>
+      <div class="resource-text">
+        <div class="resource-title">In-Person Programs</div>
+        <div class="resource-desc">Find retreats, intensives, temple programs, and community events happening near you. A regularly updated directory of in-person opportunities to deepen your practice alongside others.</div>
+        <div class="resource-meta">Directory</div>
+      </div>
+      <span class="resource-arrow" aria-hidden="true">›</span>
+    </a>
+
+    <!-- BG READING GROUP -->
+    <div class="resource-item" style="flex-direction: column; align-items: flex-start;">
+      <div style="display:flex; align-items:flex-start; gap:20px; width:100%;">
+        <div class="resource-icon community" aria-hidden="true">🕊</div>
+        <div class="resource-text">
+          <div class="resource-title">Bhagavad Gita Reading Group</div>
+          <div class="resource-desc">Join a live, facilitated reading of the Bhagavad Gita with fellow students. We read together, discuss, and ask questions in real time. All levels welcome — no prior experience needed.</div>
+          <div class="resource-meta">Tuesdays · 8–9 PM Eastern · Enter your name below to get the link</div>
+        </div>
+      </div>
+      <div class="zoom-inline-wrap" style="width:100%; max-width:480px; margin-top:20px; margin-left:60px;">
+        <div id="zoom-res-form">
+          <div class="zoom-inline-field">
+            <label for="zoom-res-name">Your Name</label>
+            <input type="text" id="zoom-res-name" placeholder="Your name" autocomplete="name">
+            <div class="zoom-inline-field-error" id="zoom-res-name-err">Please enter your name.</div>
+          </div>
+          <button class="zoom-inline-submit" id="zoom-res-submit" onclick="submitZoomRes()">Link please!</button>
+        </div>
+        <div class="zoom-inline-success" id="zoom-res-success">
+          <p>Here is the link for this week&#8217;s session. We look forward to studying with you!</p>
+          <a href="https://us05web.zoom.us/j/6022737010?pwd=UmVteldiYklORTlNVVNRZ2JMbERWQT09" target="_blank" rel="noopener">Join the Session</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMPLE ETIQUETTE -->
+    <a class="resource-item" href="https://rise.articulate.com/share/5fpTCXkJ0DYk1QXAuvjKMlBbZ7RHttNO" target="_blank" rel="noopener noreferrer">
+      <div class="resource-icon video" aria-hidden="true">🛕</div>
+      <div class="resource-text">
+        <div class="resource-title">Temple Etiquette: What to Know Before Your First Visit</div>
+        <div class="resource-desc">A short interactive course that walks you through what to expect when visiting a Hare Krishna temple for the first time — dress, customs, how to participate, and how to feel at ease.</div>
+        <div class="resource-meta">Interactive Course</div>
+      </div>
+      <span class="resource-arrow" aria-hidden="true">›</span>
+    </a>
+
+    <!-- NOTE-TAKING TEMPLATE -->
+    <div class="resource-item">
+      <div class="resource-icon doc" aria-hidden="true">📋</div>
+      <div class="resource-text">
+        <div class="resource-title">Guided Note-Taking Template</div>
+        <div class="resource-desc">A structured template designed to help you engage more deeply with course material. Includes sections for key concepts, questions, personal reflections, and practical applications.</div>
+        <div class="resource-meta">Downloadable Template · Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- EMOTIONAL MAPPING -->
+    <div class="resource-item">
+      <div class="resource-icon doc" aria-hidden="true">🗺</div>
+      <div class="resource-text">
+        <div class="resource-title">Emotional Mapping Journaling Worksheet</div>
+        <div class="resource-desc">A focused journaling guide for tracking inner patterns over time — noticing recurring reactions, emotional tendencies, and subtle shifts as your practice develops.</div>
+        <div class="resource-meta">Downloadable Worksheet · Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- READING LIST -->
+    <div class="resource-item">
+      <div class="resource-icon doc" aria-hidden="true">📚</div>
+      <div class="resource-text">
+        <div class="resource-title">Recommended Reading List</div>
+        <div class="resource-desc">A curated list of books that complement the school's curriculum — from introductory texts to deeper philosophical works, with notes on what each offers and where it fits in the broader study.</div>
+        <div class="resource-meta">Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- NORMS & POLICIES -->
+    <div class="resource-item">
+      <div class="resource-icon link" aria-hidden="true">📄</div>
+      <div class="resource-text">
+        <div class="resource-title">Norms & Policies</div>
+        <div class="resource-desc">Community expectations, discussion guidelines, and policies for participation in the school and its discussion boards. Please read before engaging in course discussions.</div>
+        <div class="resource-meta">Coming Soon</div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- EMAIL SIGNUP -->
+<section style="background: var(--cream); padding: 0 48px 80px; display: flex; justify-content: center;">
+  <script async src="https://eocampaign1.com/form/180e4180-6691-11f1-9b22-6bf7162d8b3f.js" data-form="180e4180-6691-11f1-9b22-6bf7162d8b3f"></script>
+</section>
+
+<!-- DONATE -->
+<div style="background: var(--cream); padding: 0 48px 48px; text-align: center;">
+  <a href="support.html" style="display:inline-block; font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(30,30,30,0.85); text-decoration:none; border: 1px solid rgba(30,30,30,0.6); padding: 10px 28px; border-radius:50px; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#000';this.style.borderColor='#000'" onmouseout="this.style.color='rgba(30,30,30,0.85)';this.style.borderColor='rgba(30,30,30,0.6)'">Donate</a>
+</div>
+
+<footer role="contentinfo">
+  <div class="social-icons">
+    <button onclick="showComingSoon()" aria-label="YouTube">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+    </button>
+    <button onclick="showComingSoon()" aria-label="Facebook">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+    </button>
+    <button onclick="showComingSoon()" aria-label="Instagram">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.85C2.38 3.85 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95C23.73 2.71 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32A6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Footer navigation">
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+  </nav>
+  <p>© 2025 Living Yoga Wisdom School</p>
+</footer>
+
+<div class="social-toast" id="social-toast">Coming Soon</div>
+
+<script>
+let toastTimer;
+function showComingSoon() {
+  const toast = document.getElementById('social-toast');
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-menu-close');
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+mobileClose.addEventListener('click', closeMobileMenu);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', closeMobileMenu);
+});
+
+async function submitZoomRes() {
+  const nameEl = document.getElementById('zoom-res-name');
+  const nameErr = document.getElementById('zoom-res-name-err');
+  if (!nameEl.value.trim()) {
+    nameErr.style.display = 'block'; return;
+  } else { nameErr.style.display = 'none'; }
+
+  const btn = document.getElementById('zoom-res-submit');
+  btn.textContent = 'Sending\u2026';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: '805ebac6-72bd-4370-aad3-947fdfc91c42',
+        subject:    'Weekly Bhagavad-g\u012bt\u0101 Study Request',
+        from_name:  'Living Yoga Wisdom School',
+        message:    nameEl.value.trim() + ' requested the Zoom link (Resources page).'
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('zoom-res-form').style.display = 'none';
+      document.getElementById('zoom-res-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Link please!'; btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
+  } catch(err) {
+    btn.textContent = 'Link please!'; btn.disabled = false;
+    alert('Something went wrong. Please check your connection and try again.');
+  }
+}
+</script>
+
+</body>
+</html>
